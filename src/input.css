@@ -6,11 +6,8 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: black;
 }
-
-@layer base {
-  .main-heading {
-    @apply text-xl .bg-red-500 .font-s;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 .ff_inter {
@@ -46,7 +43,7 @@ body {
     height: 4px;
     background-color: #cc2525;
     left: 0;
-    bottom: -23px;
+    bottom: -29px;
     transition: transform 300ms;
     transform-origin: right;
     transform: scaleX(0);
@@ -81,23 +78,7 @@ body {
 
 .footer_image {
   background-image: url("../assets/images/png/footer.png");
-  background-color: black;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
 }
-
-/* @media (max-width: 1024px) {
-  .navbar_design {
-    position: fixed;
-    background-color: black;
-    bottom: 0;
-    width: 100%;
-    left: 0;
-    height: 100vh;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-} */
