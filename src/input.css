@@ -83,3 +83,21 @@ html {
   background-position: center;
 }
 
+/* Loader animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Ensure loader is on top of everything */
+#page-loader {
+  z-index: 9999;
+}

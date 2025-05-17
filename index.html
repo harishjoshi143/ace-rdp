@@ -13,6 +13,10 @@
 </head>
 
 <body class="scroll-smooth">
+    <div id="page-loader"
+        class="fixed inset-0 z-[9999] flex items-center justify-center bg-black transition-opacity duration-500">
+       <img class="animate-bounce" src="./assets/images/png/logo.png" alt="">
+    </div>
     <!-- header -->
     <header class="header_bg relative">
         <div class="absolute top-0 left-0">
@@ -780,6 +784,24 @@
                 document.body.classList.add("overflow-hidden");
             }
         }
+
+
+        window.addEventListener('load', function () {
+            // Hide loader after page is fully loaded
+            setTimeout(function () {
+                const loader = document.getElementById('page-loader');
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none',
+                500); // Match the CSS transition duration
+            }, 1000); // Adjust time as needed (1000ms = 1 second)
+        });
+
+        // Optional: Also show loader when page is being refreshed
+        document.addEventListener('DOMContentLoaded', function () {
+            const loader = document.getElementById('page-loader');
+            loader.style.display = 'flex';
+            loader.style.opacity = '1';
+        });
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
